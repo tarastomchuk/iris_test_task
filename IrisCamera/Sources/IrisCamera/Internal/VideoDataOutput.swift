@@ -3,6 +3,7 @@ import OSLog
 import Foundation
 
 class VideoDataOutput: NSObject {
+    
     var displayLayer: AVSampleBufferDisplayLayer?
 
     let sampleBufferTransformer = SampleBufferTransformer()
@@ -11,6 +12,7 @@ class VideoDataOutput: NSObject {
 }
 
 extension VideoDataOutput: AVCaptureVideoDataOutputSampleBufferDelegate {
+    
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         let newBuffer = sampleBufferTransformer.transform(videoSampleBuffer: sampleBuffer)
 
