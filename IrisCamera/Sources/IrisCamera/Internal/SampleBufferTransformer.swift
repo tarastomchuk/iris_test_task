@@ -7,7 +7,6 @@ struct SampleBufferTransformer {
     
     func transform(videoSampleBuffer: CMSampleBuffer) -> CMSampleBuffer {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(videoSampleBuffer) else {
-            print("failed to get pixel buffer")
             fatalError()
         }
         let inputImage = CIImage(cvImageBuffer: pixelBuffer)
