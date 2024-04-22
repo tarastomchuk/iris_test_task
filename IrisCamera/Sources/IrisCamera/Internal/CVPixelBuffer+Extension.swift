@@ -2,6 +2,7 @@ import CoreMedia
 
 // Helper to convert `CVPixelBuffer` to `CMSampleBuffer`
 extension CVPixelBuffer {
+    
     func mapToSampleBuffer(timestamp: CMTime) throws -> CMSampleBuffer {
         var sampleBuffer: CMSampleBuffer?
         var timimgInfo = CMSampleTimingInfo(duration: CMTime.invalid,

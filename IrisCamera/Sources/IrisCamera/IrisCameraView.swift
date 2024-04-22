@@ -2,6 +2,7 @@ import AVKit
 import SwiftUI
 
 public struct IrisCameraView: View {
+    
     @State private var pipeline = CapturePipeline()
 
     public init() {}
@@ -22,6 +23,7 @@ public struct IrisCameraView: View {
 }
 
 private struct SampleBufferView: UIViewRepresentable {
+    
     let pipeline: CapturePipeline
 
     func makeUIView(context: Context) -> some UIView {

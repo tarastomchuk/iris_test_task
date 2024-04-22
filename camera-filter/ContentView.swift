@@ -9,6 +9,7 @@ import SwiftUI
 import IrisCamera
 
 struct ContentView: View {
+    
     var body: some View {
         IrisCameraView()
     }

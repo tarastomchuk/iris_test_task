@@ -4,14 +4,14 @@ import SwiftUI
 
 @Observable
 class CapturePipeline {
+    
     let session: AVCaptureSession = {
         let session = AVCaptureSession()
         session.sessionPreset = .high
         return session
     }()
-
     let output = VideoDataOutput()
-
+    
     init() {
         guard let device = AVCaptureDevice.default(for: .video),
               let input = try? AVCaptureDeviceInput(device: device),
